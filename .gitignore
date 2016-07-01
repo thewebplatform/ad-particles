@@ -1,24 +1,15 @@
-## MAC OS
 .DS_Store
 
-## TEXTMATE
-*.tmproj
-tmtags
-
-## EMACS
 *~
 \#*
 .\#*
 
-## RUBYMINE
 .idea
-
+.sass-cache
 ## VIM
 *.swp
 tags
 
-## PROJECT::GENERAL
-coverage
 rdoc
 pkg
 *.log
@@ -29,10 +20,6 @@ tmp
 doc
 Gemfile.lock
 Gemfile.local
-cucumber-pro.log
 
 ## Ruby versioniser
 .ruby-version
-
-# Temp files of yar
-.yardoc

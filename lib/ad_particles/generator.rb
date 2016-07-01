@@ -1,9 +1,9 @@
-require "atomic_particles/version"
+require "ad_particles/version"
 require "fileutils"
 require "thor"
 require "pathname"
 
-module AtomicParticles
+module AtomicDesignParticles
   class Generator < Thor
     map ["-v", "--version"] => :version
 
@@ -32,7 +32,7 @@ module AtomicParticles
 
     desc "version", "Show Atomic Particles version"
     def version
-      say "Atomic Particles #{AtomicParticles::VERSION}"
+      say "Atomic Design Particles #{AtomicDesignParticles::VERSION}"
     end
 
     private

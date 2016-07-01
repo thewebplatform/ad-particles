@@ -2,7 +2,7 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require "rspec"
-require "atomic_particles"
+require "ad_particles"
 require "css_parser"
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 

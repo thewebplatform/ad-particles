@@ -1,4 +1,4 @@
-require "atomic_particles/generator"
+require "ad_particles/generator"
 
 atomic_path = File.expand_path("../../atomic", __FILE__)
 
