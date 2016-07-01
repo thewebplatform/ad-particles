@@ -2,11 +2,11 @@ $:.push File.expand_path("../lib", __FILE__)
 require "ad_particles/version"
 
 Gem::Specification.new do |s|
-  s.add_development_dependency "css_parser", "~> 1.4.1"
-  s.add_development_dependency "rake", "~> 11.1.2"
-  s.add_development_dependency "rspec", "~> 3.4.0"
+  s.add_development_dependency "css_parser", '~> 1.4', '>= 1.4.1'
+  s.add_development_dependency "rake", "~> 11.1", ">= 11.1.2"
+  s.add_development_dependency "rspec", "~> 3.4", '>= 3.4.0'
   s.add_development_dependency "scss_lint", "0.48.0"
-  s.add_runtime_dependency "sass", "~> 3.4.22"
+  s.add_runtime_dependency "sass", "~> 3.4", ">= 3.4.22"
   s.add_runtime_dependency "thor", "~> 0.19.1"
   s.authors = [ "Erik Isaksen" ]
   s.description = <<-DESC
