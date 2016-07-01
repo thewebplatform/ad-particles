@@ -1,0 +1,33 @@
+@import "setup";
+
+.box_border--rounded {
+    @include box-border-rounded;
+}
+
+.box_border--rounded-custom {
+    @include box-border-rounded(10px);
+}
+
+.box_border {
+    @include box-border(#000);
+}
+
+.box_border--default {
+    @include box-border;
+}
+
+.box_border--custom {
+    @include box-border(#ff0000);
+}
+
+.box_border--custom-with-radius {
+    @include box-border(#ff0000, 4px);
+}
+
+.box_border--brand-primary {
+  @include box-border--primary;
+}
+
+.box_border--brand-secondary {
+  @include box-border--secondary;
+}

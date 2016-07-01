@@ -1,0 +1,51 @@
+$type-size--baseline: 14px;
+
+$type-size--h1: 2.143rem;
+$type-size--h2: 1.714rem;
+$type-size--h3: 1.143rem;
+$type-size--h4: 1rem;
+$type-size--h5: 0.857rem;
+$type-size--h6: 0.714rem;
+
+$type-size--table: 0.786rem;
+
+$type-weight--light: 300;
+$type-weight:        500;
+$type-weight--heavy: 700;
+
+$type-font_style: italic;
+
+$type-button_text_transform: uppercase;
+
+$type-leading: 1;
+$type-kerning: normal;
+
+$fontface-copy: "roboto";
+$fontface-copy--thin:    "#{$fontface-copy}-thin";
+$fontface-copy--regular: "#{$fontface-copy}-regular";
+$fontface-copy--light:   "#{$fontface-copy}-light";
+$fontface-copy--medium:  "#{$fontface-copy}-medium";
+$fontface-copy--bold:    "#{$fontface-copy}-bold";
+$fontface-copy--black:   "#{$fontface-copy}-black";
+
+$fontface-copy--thin_italic:    "#{$fontface-copy--thin}italic";
+$fontface-copy--light_italic:   "#{$fontface-copy--light}italic";
+$fontface-copy--medium_italic:  "#{$fontface-copy--medium}italic";
+$fontface-copy--regular_italic: "#{$fontface-copy--regular}italic";
+$fontface-copy--bold_italic:    "#{$fontface-copy--bold}italic";
+$fontface-copy--black_italic:   "#{$fontface-copy--black}italic";
+
+$font_faces: (
+    $fontface-copy--thin,
+    $fontface-copy--light,
+    $fontface-copy--regular,
+    $fontface-copy--medium,
+    $fontface-copy--bold,
+    $fontface-copy--black,
+    $fontface-copy--thin_italic,
+    $fontface-copy--light_italic,
+    $fontface-copy--regular_italic,
+    $fontface-copy--medium_italic,
+    $fontface-copy--bold_italic,
+    $fontface-copy--black_italic
+);

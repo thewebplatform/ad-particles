@@ -1,0 +1,11 @@
+.gitignore
+.sass-cache
+.scss-lint.yml
+bin/
+atomic_particles.gemspec
+Gemfile
+Gemfile.lock
+lib/
+pkg/
+Rakefile
+spec/

@@ -1,0 +1,9 @@
+@import "../props/color";
+
+@mixin color-gray--fade {
+  background: $color-gray;
+  background-image: -o-linear-gradient(top, $color-black--alpha 0%, $color-gray--alpha_dark 90%, $color-gray--alpha_light 100%);
+  background-image: -moz-linear-gradient(top, $color-black--alpha 0%, $color-gray--alpha_dark 90%, $color-gray--alpha_light 100%);
+  background-image: -webkit-linear-gradient(top, $color-black--alpha 0%, $color-gray--alpha_dark 90%, $color-gray--alpha_light 100%);
+  background-image: linear-gradient(top, $color-black--alpha 0%, $color-gray--alpha_dark 90%, $color-gray--alpha_light 100%);
+}

@@ -1,0 +1,155 @@
+@mixin layout-flex-flexbox($fallback: false) {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+}
+
+@mixin layout-flex-direction($value: row, $fallback: false) {
+
+  @if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+  } @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+  } @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+  } @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+
+}
+
+@mixin layout-flex-wrap($value: nowrap) {
+
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap {
+		-ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+
+}
+
+@mixin layout-flex-flow($values: (row nowrap)) {
+
+  -webkit-flex-flow: $values;
+  -moz-flex-flow: $values;
+  -ms-flex-flow: $values;
+  flex-flow: $values;
+
+}
+
+@mixin layout-flex-order($int: 0) {
+
+  -webkit-box-ordinal-group: $int + 1;
+  -webkit-order: $int;
+  -moz-order: $int;
+  -ms-flex-order: $int;
+  order: $int;
+
+}
+
+@mixin layout-flex-grow($int: 0) {
+
+  -webkit-box-flex: $int;
+  -webkit-flex-grow: $int;
+  -moz-flex-grow: $int;
+  -ms-flex-positive: $int;
+  flex-grow: $int;
+
+}
+
+@mixin layout-flex-shrink($int: 1) {
+
+  -webkit-flex-shrink: $int;
+  -moz-flex-shrink: $int;
+  -ms-flex-negative: $int;
+  flex-shrink: $int;
+
+}
+
+@mixin layout-flex-basis($value: auto) {
+
+  -webkit-flex-basis: $value;
+  -moz-flex-basis: $value;
+  -ms-flex-preferred-size: $value;
+  flex-basis: $value;
+
+}
+
+@mixin layout-flex($flex-grow: 1, $flex-shrink: null, $flex-basis: null) {
+
+  $boxflex: $flex-grow;
+
+  @if type-of($flex-grow) == "list" {
+		$boxflex: nth($flex-grow, 1);
+	}
+
+  -webkit-box-flex: $boxflex;
+  -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+  -moz-box-flex: $boxflex;
+  -moz-flex: $flex-grow $flex-shrink $flex-basis;
+  -ms-flex: $flex-grow $flex-shrink $flex-basis;
+  flex: $flex-grow $flex-shrink $flex-basis;
+}
+
+@mixin layout-flex-align_items($value: stretch) {
+
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -ms-flex-align: $value;
+	}
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  align-items: $value;
+
+}
+
+@mixin layout-flex-align-self($value: auto) {
+
+  -webkit-align-self: $value;
+  -moz-align-self: $value;
+  @if $value == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
+  }
+  align-self: $value;
+
+}
+
+@mixin layout-flex-align-content($value: stretch) {
+
+  -webkit-align-content: $value;
+  -moz-align-content: $value;
+  @if $value == flex-start {
+    -ms-flex-line-pack: start;
+  } @else if $value == flex-end {
+    -ms-flex-line-pack: end;
+  } @else {
+    -ms-flex-line-pack: $value;
+  }
+  align-content: $value;
+
+}

@@ -1,0 +1,15 @@
+@import "../props/config";
+@import "../props/type";
+@import "../modifiers/string";
+
+@mixin type-baseline($fontfam: $fontface-copy--regular) {
+  font: normal $type-weight #{$type-size--baseline}/#{$type-leading} #{$fontfam};
+};
+
+@mixin type-src($font: $fontface-copy) {
+  $font_url: "#{$config-path--fonts}#{capitalize($font)}/#{$font}-webfont.";
+  src: url("#{$font-url}eot");
+  src: url("#{$font-url}eot#iefix") format("embedded-opentype"),
+       url("#{$font-url}woff2") format("woff2"),
+       url("#{$font-url}woff") format("woff");
+};

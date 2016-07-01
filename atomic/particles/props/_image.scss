@@ -1,0 +1,4 @@
+@import "config";
+
+$image-car--small:    "#{config-path--asset_prefix}#{$config-path--images}images/pages/car.png";
+$image-carfox--large: "#{config-path--asset_prefix}#{$config-path--images}images/pages/large-fox.png";

@@ -1,0 +1,29 @@
+@import "../props/rwd";
+@import "../modifiers/rwd";
+
+@mixin rwd-scope--phone() {
+  $condition: query($max: $rwd-breakpoint--phone);
+
+  @media #{$condition} {
+    @content;
+  }
+
+}
+
+@mixin rwd-scope--tablet() {
+  $condition: query($rwd-breakpoint--tablet);
+
+  @media #{$condition} {
+    @content;
+  }
+
+}
+
+@mixin desktop() {
+  $condition: query($rwd-breakpoint--desktop);
+
+  @media#{$condition} {
+    @content;
+  }
+
+}

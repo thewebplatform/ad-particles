@@ -1,0 +1,6 @@
+@import "setup";
+
+
+.color_gray--gradient {
+    @include color-gray--fade;
+}

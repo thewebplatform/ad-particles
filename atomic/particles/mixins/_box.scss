@@ -1,0 +1,21 @@
+@import "../props/color";
+@import "../props/box";
+
+@mixin box-border-rounded($radius: $box-border_radius) {
+  border-radius: $radius;
+}
+
+@mixin box-border($color: $color-gray--light, $radius: 0) {
+  border: 1px solid $color;
+  @if($radius != 0){
+    @include box-border-rounded($radius);
+  }
+}
+
+@mixin box-border--primary {
+  @include box-border($color-brand--primary);
+}
+
+@mixin box-border--secondary {
+  @include box-border($color-brand--secondary);
+}

@@ -1,0 +1,45 @@
+
+@import "../props/color";
+@import "../props/type";
+@import "../props/box";
+@import "type";
+
+@mixin placeholder($color: $color_gray--light) {
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: 0.54;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+}
+
+@mixin form-focus_outline($color: $color-brand--primary) {
+
+  &:focus {
+    outline-color: $color;
+    outline-width: 1px;
+  }
+
+}
+
+@mixin form-textbox($color: $color-brand--primary) {
+  display: inline-block;
+  @include type-baseline;
+  color: $color;
+  line-height: $type-leading;
+  padding: $box-spacing--thinner;
+  @include box-border($color);
+  @include form-focus_outline($color);
+}

@@ -1,0 +1,37 @@
+{
+"author": {
+  "name": "Erik Isaksen",
+  "url": "https://github.com/Nevraeka"
+},
+"bugs": {
+  "url": "https://github.com/TheWebPlatform/ad-particles/issues"
+},
+"description": "A base set of variables & mixins built in SASS for Atomic Design.",
+"eyeglass": {
+  "needs": "*",
+  "exports": "eyeglass-exports.js"
+},
+"homepage": "https://thewebplatform.github.io/ad-particles",
+"keywords": [
+  "css",
+  "eyeglass-module",
+  "mixins",
+  "sass",
+  "scss",
+  "atomic",
+  "atom",
+  "atomic-design",
+  "particles"
+],
+"license": "MIT",
+"main": "index.js",
+"name": "atomic-particles",
+"repository": {
+"type": "git",
+"url": "https://github.com/TheWebPlatformPodcast/ad-particles.git"
+},
+"scripts": {
+  "test": "bundle exec rake"
+},
+"version": "0.1.0"
+}

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+$color-black--alpha:      rgba(0, 0, 0, 0);
+$color-black:             rgba(0, 0, 0, 1);
+$color-gray--alpha_dark:  rgba(184, 184, 184, 0);
+$color-gray--darker:      lighten($color-black, 13.5%);
+$color-gray--dark:        lighten($color-black, 20%);
+$color-gray:              lighten($color-black, 33.5%);
+$color-gray--light:       lighten($color-black, 60%);
+$color-gray--lighter:     lighten($color-black, 93.5%);
+$color-gray--alpha_light: rgba(204, 204, 204, 0.65);
+$color-white:             rgba(255, 255, 255, 1);
+$color-white--alpha:      rgba(255, 255, 255, 0);
+
+$color-shadow: #818181;
+
+$color-brand--primary:      #007fb2;
+$color-brand--secondary:    #e6b319;
+$color-brand--accent:       #c9eefd;
+$color-brand--primary_dark: #274982;
+
+$color-action--success: #60ab2a;
+$color-action--info:    #5bc0de;
+$color-action--warning: #f0ad4e;
+$color-action--danger:  #ffdede;
+
+$color-table_text: $color-gray;
