@@ -1,4 +1,6 @@
-$motion-duration:  1s;
-$motion-fill_mode: both;
-$motion-backface_visibility: visible;
-$motion-timing_function: ease-in;
+$motion: (
+  duration:  1s,
+  fill_mode: both,
+  backface_visibility: visible,
+  timing_function: ease-in
+);

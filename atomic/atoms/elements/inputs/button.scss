@@ -1,0 +1,39 @@
+@import '../../particles/mixins/box';
+@import '../../particles/props/type';
+@import '../../particles/props/color';
+
+button,
+[role=button],
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: map-get($type, size--baseline);
+    line-height: map-get($type, map-get(leading, icon));
+    margin: 0;
+    @include box__border__radius;
+    padding: map-get($box-spacing, spacing--wide);
+    text-align: center;
+
+    @include form__button;
+    @include form__button--disabled;
+
+    &::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    &:-moz-focusring,
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+}

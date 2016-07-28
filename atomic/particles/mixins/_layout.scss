@@ -1,4 +1,13 @@
-@mixin layout-flex-flexbox($fallback: false) {
+@import "../props/box";
+
+@mixin layout__container__fluid() {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: map-get($box, spacing--wide);
+  padding-right: map-get($box, spacing--wide);
+}
+
+@mixin layout__flex_display($fallback: false) {
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -8,7 +17,22 @@
 
 }
 
-@mixin layout-flex-direction($value: row, $fallback: false) {
+@mixin layout__justify_content($value: flex-start, $fallback: false){
+  $box_pack: start;
+  @if $value == flex-end {
+    $box_pack: end;
+  }
+  @if $value == space-between || $value == space-around {
+    $box_pack: justify;
+  }
+
+  -webkit-box-pack: $box_pack;
+  -webkit-justify-content: $value;
+      -ms-flex-pack: $box_pack;
+          justify-content: $value;
+}
+
+@mixin layout__flex_direction($value: row, $fallback: false) {
 
   @if $value == row-reverse {
 		-webkit-box-direction: reverse;
@@ -30,7 +54,7 @@
 
 }
 
-@mixin layout-flex-wrap($value: nowrap) {
+@mixin layout__flex_wrap($value: nowrap) {
 
   -webkit-flex-wrap: $value;
   -moz-flex-wrap: $value;
@@ -43,7 +67,7 @@
 
 }
 
-@mixin layout-flex-flow($values: (row nowrap)) {
+@mixin layout__flex_flow($values: (row nowrap)) {
 
   -webkit-flex-flow: $values;
   -moz-flex-flow: $values;
@@ -52,7 +76,7 @@
 
 }
 
-@mixin layout-flex-order($int: 0) {
+@mixin layout__flex_order($int: 0) {
 
   -webkit-box-ordinal-group: $int + 1;
   -webkit-order: $int;
@@ -62,7 +86,7 @@
 
 }
 
-@mixin layout-flex-grow($int: 0) {
+@mixin layout__flex_grow($int: 0) {
 
   -webkit-box-flex: $int;
   -webkit-flex-grow: $int;
@@ -72,7 +96,7 @@
 
 }
 
-@mixin layout-flex-shrink($int: 1) {
+@mixin layout__flex_shrink($int: 1) {
 
   -webkit-flex-shrink: $int;
   -moz-flex-shrink: $int;
@@ -81,7 +105,7 @@
 
 }
 
-@mixin layout-flex-basis($value: auto) {
+@mixin layout__flex_basis($value: auto) {
 
   -webkit-flex-basis: $value;
   -moz-flex-basis: $value;
@@ -90,7 +114,7 @@
 
 }
 
-@mixin layout-flex($flex-grow: 1, $flex-shrink: null, $flex-basis: null) {
+@mixin layout__flex($flex-grow: 1, $flex-shrink: null, $flex-basis: null) {
 
   $boxflex: $flex-grow;
 
@@ -106,7 +130,7 @@
   flex: $flex-grow $flex-shrink $flex-basis;
 }
 
-@mixin layout-flex-align_items($value: stretch) {
+@mixin layout__flex_align_items($value: stretch) {
 
   @if $value == flex-start {
     -webkit-box-align: start;
@@ -124,7 +148,7 @@
 
 }
 
-@mixin layout-flex-align-self($value: auto) {
+@mixin layout__flex_align_self($value: auto) {
 
   -webkit-align-self: $value;
   -moz-align-self: $value;
@@ -139,7 +163,7 @@
 
 }
 
-@mixin layout-flex-align-content($value: stretch) {
+@mixin layout__flex_align_content($value: stretch) {
 
   -webkit-align-content: $value;
   -moz-align-content: $value;

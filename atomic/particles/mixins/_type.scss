@@ -1,15 +1,19 @@
-@import "../props/config";
+@import "../config";
 @import "../props/type";
 @import "../modifiers/string";
 
-@mixin type-baseline($fontfam: $fontface-copy--regular) {
-  font: normal $type-weight #{$type-size--baseline}/#{$type-leading} #{$fontfam};
+$_primary_font: quote(map-get($type, map-get(font, primary--regular)));
+
+@mixin type__baseline($fontfam: $_primary_font) {
+  font: normal #{map-get($type, weight--normal)} #{map-get($type, map-get(size, body--base))}/#{map-get($type, map-get(leading, body--base))} #{$fontfam};
 };
 
-@mixin type-src($font: $fontface-copy) {
-  $font_url: "#{$config-path--fonts}#{capitalize($font)}/#{$font}-webfont.";
-  src: url("#{$font-url}eot");
-  src: url("#{$font-url}eot#iefix") format("embedded-opentype"),
-       url("#{$font-url}woff2") format("woff2"),
-       url("#{$font-url}woff") format("woff");
+@mixin type__src (
+  $font: $_primary_font,
+  $font_url: "#{$config__path--fonts}#{string__capitalize($_primary_font)}/#{$_primary_font}-webfont.") {
+
+  src: url("#{$font_url}eot");
+  src: url("#{$font_url}eot#iefix") format("embedded-opentype"),
+       url("#{$font_url}woff2") format("woff2"),
+       url("#{$font_url}woff") format("woff");
 };

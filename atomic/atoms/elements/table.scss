@@ -1,0 +1,42 @@
+@import '../particles/props/box';
+@import '../particles/props/type';
+@import '../particles/props/color';
+
+table {
+
+    background: $color-white;
+    font-size: $type-size--table;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th, td {
+        padding: $box-spacing;
+        color: $type-size--table;
+    }
+
+    td {
+        border-left: 1px dotted $color-gray--lighter;
+        border-bottom: 1px solid $color-gray--lighter;
+
+        &:first-child{
+            border-left: none;
+        }
+    }
+
+    th {
+        font-weight: $type-weight--heavy;
+        text-transform: uppercase;
+    }
+
+    tr {
+        &:first-child{
+            background: $color-gray--lighter;
+        }
+
+        &:nth-child(even){
+            background: $color-white;
+        }
+    }
+}

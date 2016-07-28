@@ -1,0 +1,15 @@
+@import "particles/mixins/type";
+@import "particles/props/type";
+
+$font_faces: map-get($type, map-get(font, primary));
+
+@each $font in $font_faces {
+
+  @font-face {
+      font-family: '#{$font}';
+      @include type-src($font);
+      font-weight: normal;
+      font-style: normal;
+  }
+
+}

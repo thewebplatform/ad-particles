@@ -1,4 +1,4 @@
-@import "props/config";
+@import "config";
 @import "props/box";
 @import "props/color";
 @import "props/image";
@@ -6,3 +6,14 @@
 @import "props/motion";
 @import "props/rwd";
 @import "props/type";
+
+$prop__map: (
+  config: $config,
+  color:  $color,
+  box:    $box,
+  image:  $image,
+  icon:   $icon,
+  motion: $motion,
+  rwd:    $rwd,
+  type:   $type
+);

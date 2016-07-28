@@ -1,0 +1,70 @@
+@import "../props";
+
+@mixin custom_property($prop, $val, $fallback: true) {
+    // Modified from
+    // http://codepen.io/jakealbaugh/post/css4-variables-with-fallbacks-using-sass
+  $map__name: map-get($prop__map, $prop);
+  $nest__name: null;
+  $nest__map__name: null;
+  $map: null;
+  $var__fall: null;
+  $var__output: null;
+
+  @if type-of($map__name) == list {
+    $nest__name: nth($map__name, 1);
+    $nest__map__name: nth($map__name, 2);
+  }
+
+  @if $nest-name {
+    $map: map-get($prop__map, $nest__name);
+    $nest__map: map-get($map, $nest__map__name);
+    $var__fall: map-get($nest__map, $val);
+    $var-output: var(--#{$nest__name}-#{$nest__map__name}-#{$val});
+  } @else {
+    $map: map-get($prop__map, $map-name);
+    $var-fall: map-get($map, $var);
+    $var-output: var(--#{$map__name}-#{$val});
+  }
+  @if $fallback {
+    #{$prop}: $val;
+  }
+  #{$prop}: $var__output;
+
+}
+
+@mixin apply-directive($name, $fallback: true){
+  @if $name {
+    @if $fallback {
+       @extend %#{$name};
+    }
+    @apply #{--$name}
+  }
+}
+
+@mixin custom_properties($var__map){
+  @each $prop__name, $prop__mapping in $prop__map {
+
+    @each $var, $val in $prop__mapping {
+      @if type-of($val) == map {
+        @each $var__n, $val__n in $val {
+          #{--$prop__name}__#{$var}__#{$var__n}: $val__n;
+        }
+      } @else {
+        #{--$prop__name}__#{$var}: $val;
+      }
+    }
+  }
+}
+
+@mixin divide_children($box-spacing) {
+
+  > *:after {
+    content: "|";
+    margin: 0 $box-spacing;
+  }
+
+  > *:last-child:after {
+    content: none;
+  }
+
+}

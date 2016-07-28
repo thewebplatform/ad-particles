@@ -1,0 +1,8 @@
+@import "../../particles/props/box";
+@import "../../particles/mixins/box";
+
+fieldset {
+  @include box__border;
+  margin: 0 map-get($box, spacing--thinner);
+  padding: 0.35em 0.625em 0.75em;
+}

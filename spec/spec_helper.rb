@@ -19,6 +19,6 @@ RSpec.configure do |config|
   end
 
   config.after(:all) do
-    clean_up
+    # clean_up
   end
 end

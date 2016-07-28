@@ -1,21 +1,22 @@
 @import "../props/color";
 @import "../props/box";
 
-@mixin box-border-rounded($radius: $box-border_radius) {
+@mixin box__border_rounded($radius: map-get($box, border_radius)) {
   border-radius: $radius;
 }
 
-@mixin box-border($color: $color-gray--light, $radius: 0) {
+@mixin box__border(
+  $color: map-get($color, border),
+  $color_state: map-get($color, border--state),
+  $radius: 0) {
+
   border: 1px solid $color;
-  @if($radius != 0){
-    @include box-border-rounded($radius);
+
+  &:hover {
+    border-color: $color_state;
   }
-}
 
-@mixin box-border--primary {
-  @include box-border($color-brand--primary);
-}
-
-@mixin box-border--secondary {
-  @include box-border($color-brand--secondary);
+  @if($radius != 0){
+    @include box__border_rounded($radius);
+  }
 }

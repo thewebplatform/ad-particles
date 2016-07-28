@@ -1,51 +1,53 @@
-$type-size--baseline: 14px;
+$_fontfaces: (
+  icon:      "carfax-icons",
+  primary:   "roboto",
+  secondary: "robotocondensed"
+);
 
-$type-size--h1: 2.143rem;
-$type-size--h2: 1.714rem;
-$type-size--h3: 1.143rem;
-$type-size--h4: 1rem;
-$type-size--h5: 0.857rem;
-$type-size--h6: 0.714rem;
+$type: (
 
-$type-size--table: 0.786rem;
+  size: (
+    head--largest:  2.750rem,
+    head--larger:   1.875rem,
+    head--large:    1.500rem,
+    head:           1.125rem,
+    body--base:     16px,
+    body:           1rem,
+    body--small:    0.875rem,
+    body--smaller:  0.750rem,
+    body--smallest: 0.688rem
+  ),
 
-$type-weight--light: 300;
-$type-weight:        500;
-$type-weight--heavy: 700;
+  weight--light:  300,
+  weight--normal: 500,
+  weight--bold:  700,
 
-$type-font_style: italic;
+  em__style: italic,
 
-$type-button_text_transform: uppercase;
+  leading: (
+    body--smaller: 1,
+    body--small:   1,
+    body--base:    1,
+    body--large:   1,
+    body--larger:  1,
+    head--base:    1,
+    head--large:   1,
+    head--larger:  1,
+    head--largest: 1
+  ),
 
-$type-leading: 1;
-$type-kerning: normal;
+  kerning: normal,
 
-$fontface-copy: "roboto";
-$fontface-copy--thin:    "#{$fontface-copy}-thin";
-$fontface-copy--regular: "#{$fontface-copy}-regular";
-$fontface-copy--light:   "#{$fontface-copy}-light";
-$fontface-copy--medium:  "#{$fontface-copy}-medium";
-$fontface-copy--bold:    "#{$fontface-copy}-bold";
-$fontface-copy--black:   "#{$fontface-copy}-black";
+  font: (
+    icon:               map-get($_fontfaces, icon),
+    primary: (
+      regular:   "#{map-get($_fontfaces, primary)}-regular",
+      medium:    "#{map-get($_fontfaces, primary)}-medium",
+      bold:      "#{map-get($_fontfaces, primary)}-bold"
+    ),
+    secondary: (
+      regular: "#{map-get($_fontfaces, secondary)}-regular"
+    )
+  )
 
-$fontface-copy--thin_italic:    "#{$fontface-copy--thin}italic";
-$fontface-copy--light_italic:   "#{$fontface-copy--light}italic";
-$fontface-copy--medium_italic:  "#{$fontface-copy--medium}italic";
-$fontface-copy--regular_italic: "#{$fontface-copy--regular}italic";
-$fontface-copy--bold_italic:    "#{$fontface-copy--bold}italic";
-$fontface-copy--black_italic:   "#{$fontface-copy--black}italic";
-
-$font_faces: (
-    $fontface-copy--thin,
-    $fontface-copy--light,
-    $fontface-copy--regular,
-    $fontface-copy--medium,
-    $fontface-copy--bold,
-    $fontface-copy--black,
-    $fontface-copy--thin_italic,
-    $fontface-copy--light_italic,
-    $fontface-copy--regular_italic,
-    $fontface-copy--medium_italic,
-    $fontface-copy--bold_italic,
-    $fontface-copy--black_italic
 );

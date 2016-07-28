@@ -1,0 +1,25 @@
+@import "../config";
+@import "../props/icon";
+@import "../props/type";
+
+@mixin icon__font__base(){
+    font-family: quote(map-get($type, map-get(font, icon)));
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: map-get($type, map-get(leading, body--base)));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon__font__glyph($icon) {
+  @each $icon__name, $icon__glyph in map-get($icon, glyph__map) {
+
+      &:before {
+        content: $icon__glyph;
+      }
+
+  }
+}

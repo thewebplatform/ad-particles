@@ -1,0 +1,12 @@
+input[type=search],
+[role=search] {
+
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+}

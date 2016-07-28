@@ -1,3 +1,6 @@
-$rwd-breakpoint--phone:   326px;
-$rwd-breakpoint--tablet:  768px;
-$rwd-breakpoint--desktop: 1200px;
+$rwd: (
+  breakpoint--phone:   326px,
+  breakpoint--phablet: 580px,
+  breakpoint--tablet:  768px,
+  breakpoint--desktop: 1200px
+);

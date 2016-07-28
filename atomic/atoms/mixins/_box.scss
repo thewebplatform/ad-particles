@@ -1,0 +1,14 @@
+
+@mixin box__reset--block{
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin box__reset--inline-block {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}

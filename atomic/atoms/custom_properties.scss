@@ -1,0 +1,5 @@
+@import "../particles";
+
+:root {
+  @include custom_properties($prop__map);
+}

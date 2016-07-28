@@ -1,6 +1,8 @@
-$box-border_radius: 3px;
-$box-spacing--thinner: 2px;
-$box-spacing--thin: 5px;
-$box-spacing: 10px;
-$box-spacing--wide: 15px;
-$box-spacing--wider: 20px;
+$box: (
+  border_radius:  3px,
+  space--thinner: 2px,
+  space--thin:    5px,
+  space:          10px,
+  space--wide:    15px,
+  space--wider:   20px
+)

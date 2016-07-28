@@ -1,0 +1,31 @@
+@mixin type__font__src($font: $fontface-copy ) {
+    $font_extensions: ( 'eot', 'woff', 'woff2' );
+    $font_url: '#{$cdn_location--fonts}#{capitalize($font)}/#{$font}-webfont.';
+
+    src: url('#{$font-url}eot');
+    src: url('#{$font-url}eot#iefix') format('embedded-opentype'),
+         url('#{$font-url}woff2') format('woff2'),
+         url('#{$font-url}woff') format('woff');
+    }
+};
+
+@mixin type__adjust {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-display: optional;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin type__reset--notes {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@mixin type__reset--code {
+  font-family: monospace, monospace;
+  font-size: 1rem;
+  line-height: 1;
+}

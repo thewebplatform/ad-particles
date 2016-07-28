@@ -1,0 +1,11 @@
+
+@import "../../particles/mixins/type";
+@import "../../particles/props/color";
+@import "../config";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: map-get($color, gray--dark);
+  @include type-baseline(map-get($type, map-get(font, body)));
+}

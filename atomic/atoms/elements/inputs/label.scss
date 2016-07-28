@@ -1,0 +1,8 @@
+@import "../../particles/props/type";
+@import "../../particles/props/box";
+
+label {
+  display: inline-block;
+  font-size: map-get($type, size--baseline);
+  margin-right: map-get($box, space);
+}

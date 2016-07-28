@@ -1,33 +1,33 @@
 @import "setup";
 
-.box_border--rounded {
-    @include box-border-rounded;
+.box__border--rounded {
+    @include box__border_rounded;
 }
 
-.box_border--rounded-custom {
-    @include box-border-rounded(10px);
+.box__border--rounded-custom {
+    @include box__border_rounded(10px);
 }
 
-.box_border {
-    @include box-border(#000);
+.box__border {
+    @include box__border(#000);
 }
 
-.box_border--default {
-    @include box-border;
+.box__border--default {
+    @include box__border;
 }
 
-.box_border--custom {
-    @include box-border(#ff0000);
+.box__border--custom {
+    @include box__border(#ff0000);
 }
 
-.box_border--custom-with-radius {
-    @include box-border(#ff0000, 4px);
+.box__border--custom-with-radius {
+    @include box__border(#ff0000, 4px);
 }
 
-.box_border--brand-primary {
-  @include box-border--primary;
+.box__border--brand-primary {
+  @include box__border--primary;
 }
 
-.box_border--brand-secondary {
-  @include box-border--secondary;
+.box__border--brand-secondary {
+  @include box__border--secondary;
 }

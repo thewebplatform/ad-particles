@@ -1,0 +1,11 @@
+$_asset__path__base: "/assets";
+
+$config: (
+  path__home:              "/",
+  path__cdn:               "",
+  path__assets:            $_asset__path__base,
+  path__assets--images:    "#{$_asset__path__base}/images/",
+  path__assets--headfonts: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/",
+  path__assets--bodyfonts: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/",
+  path__assets--iconfonts: "#{$_asset__path__base}/fonts/"
+);

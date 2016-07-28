@@ -1,1 +1,18 @@
-$icon-input--checkbox: '"\2713"';
+$icon: (
+  input--checkbox: '"\2713"',
+
+  glyph__map: (
+    vh__checkmark    : '\e900',
+    vh__home         : '\e901',
+    vh__one          : '\e902',
+    vh__tools        : '\e903',
+    chevron--down    : '\e313',
+    chevron--left    : '\e314',
+    chevron--right   : '\e315',
+    chevron--up      : '\e316',
+    reorder          : '\e8fe',
+    settings         : '\e8b8',
+    share            : '\e80d'
+  )
+
+);

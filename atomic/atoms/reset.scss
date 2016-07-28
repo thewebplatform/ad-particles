@@ -1,0 +1,134 @@
+@import "./mixins/box";
+@import "./mixins/type";
+
+html {
+  @include type__adjust();
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body,
+li {
+  @include layout__flex_display();
+  @include layout__flex_direction('column');
+  @include layout__flex_wrap();
+  @include layout__justify_content();
+  @include layout__flex_align_items();
+  @include layout__flex_align_content();
+}
+
+* {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+form,
+ul,
+ol,
+nav,
+section,
+summary,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   @include box__reset--block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  @include box__reset--inline-block;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  width: 100%;
+}
+
+dfn, em {
+  font-style: map-get($type, em__style);
+}
+
+sub,
+sup {
+  @include type__reset--notes;
+}
+
+code,
+kbd,
+pre,
+samp {
+  @include type__reset--code;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+header {
+  @include layout__flex_display();
+  @include layout__flex_direction('column');
+  @include layout__justify_content();
+  @include layout__flex_align_items();
+}
+
+input,
+select {
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: solid 2px map-get($color, map-get($brand, primary);
+  outline-color: map-get($color, map-get($brand, primary);
+  background-color: rgba(255,255,255,0);
+}
+
+input[type=text],
+input[type=search],
+input[type=password],
+input[type=number],
+select {
+  border-radius: 0;
+  width: 100%;
+  line-height: 1;
+  font-size: inherit;
+  display: block;
+}

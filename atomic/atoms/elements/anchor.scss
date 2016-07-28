@@ -1,0 +1,16 @@
+@import "../../particles/props/color";
+
+a,
+[role=link] {
+
+    background-color: $color-white--alpha;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+    font-size: inherit;
+
+    &:active,
+    &:hover {
+      outline-width: 0;
+      text-decoration: underline;
+    }
+}

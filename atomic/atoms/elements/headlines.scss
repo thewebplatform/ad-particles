@@ -1,0 +1,31 @@
+@import "../../particles/props/type";
+@import "../../particles/props/color";
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: map-get($type, weight--heavy);
+  color: map-get($color, gray--darker);
+}
+
+// h1 {
+//   font-size: $type-size--h1;
+// }
+//
+// h2 {
+//   font-size: $type-size--h2;
+// }
+//
+// h3 {
+//   font-size: $type-size--h3;
+// }
+//
+// h4 {
+//   font-size: $type-size--h4;
+// }
+//
+// h5 {
+//   font-size: $type-size--h5;
+// }
+//
+// h6 {
+//   font-size: $type-size--h6;
+// }

@@ -1,0 +1,19 @@
+@import "../../particles/props/color";
+@import "../../particles/props/box";
+@import "../../particles/mixins/box";
+@import "../../particles/props/icon";
+
+input[type=checkbox],
+[role=checkbox] {
+
+  padding: 0;
+  margin: map-get($box, space--thinner);
+  text-align: center;
+  @include box__border;
+
+  &:checked {map-get(
+    content: map-get($)icon, input--checkbox);
+    color: map-get($color, action--success);
+  }
+
+}
